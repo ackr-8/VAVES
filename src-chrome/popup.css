@@ -1,0 +1,284 @@
+html,body {
+    min-width: 250px;
+    height: 100% !important;
+    display: inline-flex;
+    padding: 0px;
+    padding-top: 0px !important;
+    margin: 0px !important;
+    font-family: sans-serif;
+    overflow: hidden;
+    background: #2E3440;
+  }
+  /* MAIN */
+  /* =============================================== */
+  .rad-label {
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    padding: 14px 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .rad-label:hover,
+  .rad-label:focus-within {
+    background: #4C566A;
+  }
+  
+  .rad-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .rad-design {
+    width: 22px;
+    height: 22px;
+    border-radius: 100px;
+    background: #A3BE8C;
+    position: relative;
+  }
+  
+  .rad-design::before {
+    content: '';
+  
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+  
+    background: #81A1C1;
+    transform: scale(1.1);
+    transition: .3s;
+  }
+  
+  .rad-input:checked+.rad-design::before {
+    transform: scale(0);
+  }
+  
+  .rad-text {
+    color: #E5E9F0;
+    margin-left: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 900;
+    transition: .3s;
+  }
+  
+  .rad-input:checked~.rad-text {
+    color: #D8DEE9;
+  }
+
+
+/* Nav Bar begins */
+body{
+    position: relative;
+    top: 1px;
+    bottom: 1px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    margin-top: 0px;
+    /* margin-bottom: -20px; */
+    /* padding-top: 10px; */
+    padding : 15px
+  }
+  
+  nav {
+    position: relative;
+    display: block;
+    background-color: #f1f3f5d0;
+    padding: 10px;
+    border-radius: 40px;
+    transform: scale(1.2);
+    overflow: hidden;
+  }
+  
+  nav a {
+    position: relative;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    padding: 6.5px;
+    box-sizing: border-box;
+    z-index: 2;
+    color: #0c0808;
+
+  }
+  
+  nav a b {
+    position: relative;
+    top: 40px;
+    transition: 0.3s ease top;
+  }
+  
+  nav a i {
+    position: relative;
+    left: 25%;
+    transition: 0.3s ease left;
+  }
+  
+  nav span {
+    position: absolute;
+    width: 80px;
+    background-color: #e5eeff;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 40px;
+    z-index: 1;
+    transition: 0.3s ease left;
+    padding: 10px;
+    
+  }
+  
+  nav a:hover b {
+    top: 0;
+  }
+  
+  nav a:hover i {
+    left: 0;
+  }
+  
+  nav a:nth-child(1):hover ~ span {
+    left: 10px;
+  }
+  
+  nav a:nth-child(2):hover ~ span {
+    left: 114px;
+  }
+  
+  nav a:nth-child(3):hover ~ span {
+    left: 218px;
+  }
+  
+
+nav {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    /* From https://css.glass */
+    background: #4C566A;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+  }
+/* Nav Bar ended */
+
+
+.mid{
+
+  background: #434C5E;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
+
+}
+.main{
+  /* -webkit-border-radius: 50px !important;  */
+    background: none;
+    /* border-radius: 40px !important; */
+    justify-content: center;
+    align-content: center;
+
+    
+    
+}
+::-webkit-scrollbar {
+    display: none;
+
+}
+
+.html{
+
+    background: rgba(248, 248, 248, 0.21) !important;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.8px);
+    -webkit-backdrop-filter: blur(12.8px);
+    padding: 0px !important;
+    
+    background-color: rgba(0, 0, 0, 0) !important ;
+}
+.bottom{
+    top: 20px !important;
+    bottom: 10px !important;
+    text-align: center;
+    text-decoration: none;
+    background: #4C566A;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    margin: 1px;
+  
+  }
+
+.footer{
+    top: 0px !important;
+    bottom: 0px !important;
+    text-align: center;
+    text-decoration: none;
+    background: #4C566A;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    margin: 1px;
+  
+  }
+
+/* .footer{
+  text-decoration: none;
+    color: #E5E9F0;
+    font-family: sans-serif;
+    font-size: 10px !important;
+    font-weight: 900;
+    transition: .3s;
+} */
+
+a:link {
+  color: #E5E9F0!important;
+}
+
+/* mouse over link */
+a:hover {
+  color: #E5E9F0 !important;
+}
+/* selected link */
+a:active {
+  color: #E5E9F0 !important;
+}
+
+.VAVES{
+  text-decoration: none;
+    color: #E5E9F0;
+    font-family: sans-serif;
+    margin-left: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 20px !important;
+    font-weight: 900;
+    transition: .3s;
+  
+}
+.contact{
+    text-decoration: none;
+      color: #E5E9F0;
+      font-family: sans-serif;
+      margin-left: 10px;
+      letter-spacing: 2px;
+      font-size: 15px !important;
+      font-weight: 900;
+      transition: .3s;
+}

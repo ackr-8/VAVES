@@ -1,0 +1,46 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "manifest_version": 3,
+  "name": "VAVES",
+  "description": "Makes QoL changes to VIT-AP's Academic Portal",
+  "version": "0.10.0",
+  "author": "Chandra Kiran (ackr-8)",
+  "permissions": [
+    "webRequest",
+    "downloads",
+    "storage",
+    "declarativeContent",
+    "activeTab"
+  ],
+  "host_permissions":[
+    "*://vtop2.vitap.ac.in/*"
+  ],
+  "icons": {
+    "16":"./images/favicon-16x16.png",
+    "32":"./images/favicon-32x32.png",
+    "48":"./images/favicon-48x48.png",
+    "128":"./images/favicon-128x128.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "./images/favicon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://vtop2.vitap.ac.in/*"],
+      "js": [
+        "jquery.js",
+        "jquery.BlockUI.js",
+        "bitmaps.js",
+        "coursepage.js",
+        "internalmarkspage.js",
+        "general.js",
+        "captchaparser.js"
+      ]
+    }
+  ]
+}
